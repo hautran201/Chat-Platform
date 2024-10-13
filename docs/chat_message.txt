@@ -1,0 +1,28 @@
+Chat Message 
+
+
+Database 
+
+User :
+- Id
+- Name:
+- Email:
+- Password:
+- Phone Number:
+
+
+Chat: 
+- Id :
+- Title:
+- Description:
+- Members:
+- Status
+
+
+Message: 
+- Id: 
+- ChatId:    (Id user | ID chat)
+- Sender:
+
+
+
