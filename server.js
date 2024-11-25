@@ -1,9 +1,11 @@
 const app = require("./src/app");
 
-const PORT = 3000;
+const {
+  app: { port },
+} = require("./src/configs/config.mongodb");
 
-app.listen(PORT, (error) => {
-  console.log(`Server listening on Port ${PORT}`);
+app.listen(port, (error) => {
+  console.log(`WSV Chat-Platform start with ${port}`);
   if (error) {
     process.exit(0);
   }

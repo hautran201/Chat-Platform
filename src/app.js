@@ -1,9 +1,9 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const helmet = require("helmet");
 const compression = require("compression");
-
 // Middleware
 app.use(morgan("dev"));
 app.use(helmet());
@@ -14,6 +14,9 @@ app.use(
     extended: true,
   })
 );
+
+// Connect database
+require("./dbs/init.mongodb");
 
 //Routers
 app.get("/", (req, res) => {
